@@ -664,6 +664,7 @@ full_data_sansON$weakness <- case_when(
   full_data_sansON$allna_check ~ "Miss",
   grepl("weakness", full_data_sansON$e_othersx_spec, ignore.case = TRUE) ~ "Yes",
   grepl("weakness", full_data_sansON$e_othersx_spec_2, ignore.case = TRUE) ~ "Yes",
+  grepl("weakness", full_data_sansON$e_othersx_spec_3, ignore.case = TRUE) ~ "Yes",
   full_data_sansON$e_othersx == 0 ~ "No"
 )
 
@@ -769,7 +770,7 @@ full_data_sansON$cvs <- case_when(
   as.numeric(full_data_sansON$j_cvs) == 1 ~ "Yes",
   as.numeric(full_data_sansON$l_htn) == 1 ~ "Yes",
   as.numeric(full_data_sansON$j_cvs) == 0 ~ "No",
-  is.na(full_data_sansON$j_cvs) ~ "No"
+  is.na(full_data_sansON$j_cvs) ~ "No Entry"
 )
 
 full_data_sansON$cns <- case_when(
@@ -778,7 +779,7 @@ full_data_sansON$cns <- case_when(
   full_data_sansON$j_none___1 == 1 ~ "No",
   full_data_sansON$j_cns == 1 ~ "Yes",
   full_data_sansON$j_cns == 0 ~ "No",
-  is.na(full_data_sansON$j_cns) ~ "No"
+  is.na(full_data_sansON$j_cns) ~ "No Entry"
 )
 
 full_data_sansON$resp <- case_when(
@@ -787,7 +788,7 @@ full_data_sansON$resp <- case_when(
   full_data_sansON$j_none___1 == 1 ~ "No",
   full_data_sansON$j_resp == 1 ~ "Yes",
   full_data_sansON$j_resp == 0 ~ "No",
-  is.na(full_data_sansON$j_resp) ~ "No"
+  is.na(full_data_sansON$j_resp) ~ "No Entry"
 )
 
 full_data_sansON$eentm <- case_when(
@@ -796,7 +797,7 @@ full_data_sansON$eentm <- case_when(
   full_data_sansON$j_none___1 == 1 ~ "No",
   full_data_sansON$j_eentm == 1 ~ "Yes",
   full_data_sansON$j_eentm == 0 ~ "No",
-  is.na(full_data_sansON$j_eentm) ~ "No"
+  is.na(full_data_sansON$j_eentm) ~ "No Entry"
 )
 
 
@@ -806,7 +807,7 @@ full_data_sansON$gi <- case_when(
   full_data_sansON$j_none___1 == 1 ~ "No",
   full_data_sansON$j_gi == 1 ~ "Yes",
   full_data_sansON$j_gi == 0 ~ "No",
-  is.na(full_data_sansON$j_gi) ~ "No"
+  is.na(full_data_sansON$j_gi) ~ "No Entry"
 )
 
 full_data_sansON$gu <- case_when(
@@ -815,7 +816,7 @@ full_data_sansON$gu <- case_when(
   full_data_sansON$j_none___1 == 1 ~ "No",
   full_data_sansON$j_gu == 1 ~ "Yes",
   full_data_sansON$j_gu == 0 ~ "No",
-  is.na(full_data_sansON$j_gu) ~ "No"
+  is.na(full_data_sansON$j_gu) ~ "No Entry"
 )
 
 full_data_sansON$repro <- case_when(
@@ -824,7 +825,7 @@ full_data_sansON$repro <- case_when(
   full_data_sansON$j_none___1 == 1 ~ "No",
   full_data_sansON$j_repro == 1 ~ "Yes",
   full_data_sansON$j_repro == 0 ~ "No",
-  is.na(full_data_sansON$j_repro) ~ "No"
+  is.na(full_data_sansON$j_repro) ~ "No Entry"
 )
 
 full_data_sansON$endo <- case_when(
@@ -833,7 +834,7 @@ full_data_sansON$endo <- case_when(
   full_data_sansON$j_none___1 == 1 ~ "No",
   full_data_sansON$j_endo == 1 ~ "Yes",
   full_data_sansON$j_endo == 0 ~ "No",
-  is.na(full_data_sansON$j_endo) ~ "No"
+  is.na(full_data_sansON$j_endo) ~ "No Entry"
 )
 
 full_data_sansON$ms <- case_when(
@@ -842,7 +843,7 @@ full_data_sansON$ms <- case_when(
   full_data_sansON$j_none___1 == 1 ~ "No",
   full_data_sansON$j_ms == 1 ~ "Yes",
   full_data_sansON$j_ms == 0 ~ "No",
-  is.na(full_data_sansON$j_ms) ~ "No"
+  is.na(full_data_sansON$j_ms) ~ "No Entry"
 )
 
 full_data_sansON$hem <- case_when(
@@ -851,7 +852,7 @@ full_data_sansON$hem <- case_when(
   full_data_sansON$j_none___1 == 1 ~ "No",
   full_data_sansON$j_hem == 1 ~ "Yes",
   full_data_sansON$j_hem == 0 ~ "No",
-  is.na(full_data_sansON$j_hem) ~ "No"
+  is.na(full_data_sansON$j_hem) ~ "No Entry"
 )
 
 full_data_sansON$mh <- case_when(
@@ -860,7 +861,7 @@ full_data_sansON$mh <- case_when(
   full_data_sansON$j_none___1 == 1 ~ "No",
   full_data_sansON$j_mh == 1 ~ "Yes",
   full_data_sansON$j_mh == 0 ~ "No",
-  is.na(full_data_sansON$j_mh) ~ "No"
+  is.na(full_data_sansON$j_mh) ~ "No Entry"
 )
 
 full_data_sansON$aai <- case_when(
@@ -869,7 +870,7 @@ full_data_sansON$aai <- case_when(
   full_data_sansON$j_none___1 == 1 ~ "No",
   full_data_sansON$j_aai == 1 ~ "Yes",
   full_data_sansON$j_aai == 0 ~ "No",
-  is.na(full_data_sansON$j_aai) ~ "No"
+  is.na(full_data_sansON$j_aai) ~ "No Entry"
 )
 
 full_data_sansON$other_comor <- case_when(
@@ -878,7 +879,7 @@ full_data_sansON$other_comor <- case_when(
   full_data_sansON$j_none___1 == 1 ~ "No",
   full_data_sansON$j_oth == 1 ~ "Yes",
   full_data_sansON$j_oth == 0 ~ "No",
-  is.na(full_data_sansON$j_oth) ~ "No"
+  is.na(full_data_sansON$j_oth) ~ "No Entry"
 )
 
 
@@ -1516,9 +1517,11 @@ full_data_sansON$sga2 <- case_when(
 
 
 #### SUMMARISE BY PROVINCE AND DATE RANGE #####
-full_data_sansON %>% group_by(prov) %>% filter(e_diagnosis < as.Date("2023-01-01")) %>% summarise(n = length(unique(a_record_id)), min_date = min(as.Date(e_diagnosis), na.rm = TRUE), max_date = max(as.Date(e_diagnosis), na.rm = TRUE))
+full_data_sansON %>% group_by(prov) %>% filter(e_diagnosis < as.Date("2023-01-01")) 
+%>% summarise(n = length(unique(a_record_id)), min_date = min(as.Date(e_diagnosis), na.rm = TRUE), max_date = max(as.Date(e_diagnosis), na.rm = TRUE))
 
-# full_data_sansON_duplicated %>% group_by(prov) %>% summarise(n = length(a_record_id), min_date = min(as.Date(e_diagnosis), na.rm = TRUE), max_date = max(as.Date(e_diagnosis), na.rm = TRUE))
+# full_data_sansON_duplicated %>% group_by(prov) %>% summarise(n = length(a_record_id),
+# min_date = min(as.Date(e_diagnosis), na.rm = TRUE), max_date = max(as.Date(e_diagnosis), na.rm = TRUE))
 # full_data_sansON_duplicated$e_diagnosis <- as.Date(full_data_sansON_duplicated$e_diagnosis)
 
 data_on %>% summarise(n=n(),min_date = min(as.Date(C_COVID_diagnosis_date), na.rm = TRUE), max_date = max(as.Date(C_COVID_diagnosis_date), na.rm = TRUE))
